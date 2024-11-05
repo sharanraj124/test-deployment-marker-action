@@ -1,0 +1,23 @@
+name: Deploy to Atatus
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Call External API Action
+        uses: ./
+        with:
+          api_url: 'https://api.atatus.com/v2/projects/'
+          api_key: 'lic_7f3a234ad04d46738ff9c9de24b3e3f0'
+          changes: 'Bug fix'
+          revision: '12345abc'
+          release_stage: 'production'
+          project_id: '5e006ce66a8b5047e91dc2c7'
