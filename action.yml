@@ -4,7 +4,7 @@ inputs:
   api_url:
     description: 'The URL of the API to call.'
     required: true
-    default: 'https://api.atatus.com/v2/projects/'
+    default: 'https://api.atatus.com/v2/projects'
   api_key:
     description: 'Your Atatus API Key.'
     required: true
@@ -26,5 +26,5 @@ outputs:
   response:
     description: 'The response from the external API call.'
 runs:
-  using: 'node20'
+  using: 'node16'
   main: 'index.js'

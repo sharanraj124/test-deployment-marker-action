@@ -16,8 +16,8 @@ jobs:
         uses: ./
         with:
           api_url: 'https://api.atatus.com/v2/projects/'
-          api_key: '****'
+          api_key: '06940b2ade414daeaa4fabb61e302089'
           changes: 'Bug fix'
           revision: '12345abc'
           release_stage: 'production'
-          project_id: '***'
+          project_id: '5e006ce66a8b5047e91dc2c7'
