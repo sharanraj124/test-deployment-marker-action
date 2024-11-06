@@ -20,7 +20,7 @@ async function callApi() {
     };
 
     // Make the API call using axios
-    const response = await axios.post(`${apiUrl}/${project_id}/deployments`, payload);
+    const response = await axios.post(`https://api.atatus.com/v2/projects/${project_id}/deployments`, payload);
 
     // Log the successful response
     console.log('Deployment successful:', response.data);
