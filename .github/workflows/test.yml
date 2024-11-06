@@ -15,9 +15,9 @@ jobs:
       - name: Call External API Action
         uses: ./
         with:
-          api_url: 'https://api.atatus.com/v2/projects/'
-          api_key: '06940b2ade414daeaa4fabb61e302089'
-          changes: 'Bug fix'
-          revision: '12345abc'
+          api_url: 'https://api.atatus.com/v2/projects'
+          api_key: ${{ secrets.ATATUS_API_KEY }}
+          changes: ${{ env.CHANGED_FILES }}
+          revision: ${{ github.run_number }}
           release_stage: 'production'
-          project_id: '5e006ce66a8b5047e91dc2c7'
+          project_id: ${{ secrets.ATATUS_PROJECT_ID }}
